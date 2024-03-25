@@ -1,0 +1,139 @@
+body{
+    background-color: silver;
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    z-index: 0;
+}
+
+header{
+    background-color: slategray;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 70%;
+    padding: 6px;
+
+}
+
+nav {
+    background-color: rgb(83, 90, 97);
+    color: white;
+    padding: 6px;
+}
+
+#content{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* ez a default */
+    min-height: 150px;
+    width: 100%;
+}
+
+#leftside{
+    width: 25%;
+    padding: 6px;
+    background-color: yellow;
+
+}
+
+#center{
+    width: 50%;
+    padding: 6px;
+    background-color: lightcoral;
+
+}
+
+#rightside{
+    width: 25%;
+    padding: 6px;
+    background-color: aqua;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu li{
+    display: inline-block;
+    border-right: 1px solid black;
+}
+
+.menu li a{
+    display: block;
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    cursor: pointer;    
+}
+
+.menu li a:hover{
+    background-color: black;
+    color: white;
+}
+#leier{
+    font-size: 700%;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(90, 101, 158, 0,8);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+@media screen and (max-width: 800px){
+    #content{
+        flex-direction: column;
+    }
+
+    #leftside, #center, #rightside {
+        width: auto;
+    }
+
+    #center{
+        flex-grow: 1;
+    }
+
+    #rightside{
+        display: none;
+    }
+
+    .menu li{
+        display: block;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .menu li:last-child{
+        border-bottom: none;
+    }
+
+    .menu li a{
+        padding: 10px;
+    }
+
+    header h1{
+        font-size: 130%;
+    }
+}
